@@ -151,8 +151,15 @@ var contentsplit1=contentsplit1+" "
                                 //var nircmd =path.resolve('./plugins/infomathilde/nircmd/nircmd.exe').replace('\\%CD%', '')
                                 var nircmd=JarvisIANircmd
                                 var nircmd=nircmd+' closeprocess '+'" '+contentsplit[i]+'"'
-                                var child2 = exec(nircmd);//console.log(nircmd)
-                                
+                                var child2 = exec(nircmd);console.log(nircmd+"!!!!!")
+
+                                var nircmd=JarvisIANircmd
+                                var z=contentsplit[i].lastIndexOf(".")
+                                var nircmdchemin=contentsplit[i].substr(0, z)+"64.exe"+'"';console.log(nircmd)
+                                //var nircmd="C:\\Program Files\\CCleaner\\CCleaner64.exe"
+                                var nircmd=nircmd+' closeprocess '+'" '+nircmdchemin+'"'
+                                var child3 = exec(nircmd);//
+                                console.log(nircmd+"!!!")
                                 var nomduplugin="programmemathilde"//ou autre nom....
                                 var valeurduspeak="|je ferme|tu est sur|tu n'en as plus besoin ?"//phrase à dire
                                 //SARAH.run('speak', { 'nomduplugin' : nomduplugin , 'valeurduspeak' : valeurduspeak});
